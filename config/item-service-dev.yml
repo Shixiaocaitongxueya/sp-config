@@ -1,11 +1,13 @@
-spring: 
+spring:
+  application:
+    name: user-service
+    
   cloud:
     config:
-      discovery:
-        enabled: true
-        service-id: config-server
-      name: item-service
-      profile: dev
+      override-none: true
+      
+server:
+  port: 8001
       
 eureka:
   client:
